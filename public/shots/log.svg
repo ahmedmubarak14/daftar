@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="-apple-system, Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="orange3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5a1f"/><stop offset="1" stop-color="#c83512"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="780" rx="16" fill="#f5f4f0"/>
+  <rect x="16" y="16" width="1168" height="748" rx="12" fill="#ffffff" stroke="#ececea"/>
+  <rect x="16" y="16" width="1168" height="40" rx="12" fill="#faf9f6" stroke="#ececea"/>
+  <circle cx="40" cy="36" r="5" fill="#ff6b6b"/><circle cx="58" cy="36" r="5" fill="#ffb24a"/><circle cx="76" cy="36" r="5" fill="#44c06a"/>
+  <text x="600" y="40" font-size="11" fill="#87847c" text-anchor="middle">daftar/log</text>
+
+  <g transform="translate(40,82)">
+    <text font-size="11" letter-spacing="1.5" font-weight="700" fill="#87847c">LOG A TRANSACTION</text>
+    <text y="28" font-size="22" font-weight="600" fill="#1e1c1a">Type what happened.</text>
+    <text y="54" font-size="13" fill="#87847c">Arabic or English. The engine proposes a classification with a one-line rationale — nothing posts until you confirm.</text>
+  </g>
+
+  <!-- Input -->
+  <g transform="translate(40,170)">
+    <rect width="1120" height="110" rx="14" fill="#ffffff" stroke="#ececea"/>
+    <text x="22" y="40" font-size="16" fill="#1e1c1a">paid 8,700 SAR at Jarir for 2 MacBooks for the team</text>
+    <rect x="1096" y="18" width="4" height="74" rx="2" fill="url(#orange3)"/>
+    <g transform="translate(22,68)">
+      <rect width="120" height="24" rx="12" fill="#f5f4f0"/>
+      <text x="60" y="16" font-size="11" fill="#87847c" text-anchor="middle">Upload receipt</text>
+    </g>
+    <g transform="translate(150,68)">
+      <rect width="120" height="24" rx="12" fill="#f5f4f0"/>
+      <text x="60" y="16" font-size="11" fill="#87847c" text-anchor="middle">Paste ZATCA QR</text>
+    </g>
+    <g transform="translate(950,62)">
+      <rect width="150" height="36" rx="10" fill="url(#orange3)"/>
+      <text x="75" y="23" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="600">Propose classification</text>
+    </g>
+  </g>
+
+  <!-- Proposal -->
+  <g transform="translate(40,310)">
+    <rect width="1120" height="316" rx="14" fill="#ffffff" stroke="#ececea"/>
+    <g transform="translate(22,30)">
+      <text font-size="11" fill="#c83512" letter-spacing="1.5" font-weight="700">PROPOSED</text>
+      <text x="1076" y="0" text-anchor="end" font-size="11" fill="#047857" font-weight="700">CONFIDENCE 94%</text>
+    </g>
+    <text x="62" y="66" font-size="17" fill="#1e1c1a" font-weight="600">Capitalize as IT Equipment · 48-month straight-line</text>
+
+    <!-- Two-column journal preview -->
+    <g transform="translate(22,100)">
+      <rect width="660" height="180" rx="10" fill="#faf9f6"/>
+      <g transform="translate(20,26)" font-size="12" fill="#87847c" letter-spacing="1" font-weight="700">
+        <text>ACCOUNT</text>
+        <text x="400" text-anchor="end">DEBIT</text>
+        <text x="580" text-anchor="end">CREDIT</text>
+      </g>
+      <line x1="42" y1="40" x2="642" y2="40" stroke="#ececea"/>
+      <g transform="translate(42,70)" font-size="13">
+        <g>
+          <text x="0" fill="#1e1c1a">1510 · IT Equipment</text>
+          <text x="400" fill="#1e1c1a" text-anchor="end" font-weight="600">8,700.00</text>
+          <text x="580" fill="#87847c" text-anchor="end">—</text>
+        </g>
+        <g transform="translate(0,36)">
+          <text x="0" fill="#1e1c1a">1010 · Cash · Al Rajhi</text>
+          <text x="400" fill="#87847c" text-anchor="end">—</text>
+          <text x="580" fill="#1e1c1a" text-anchor="end" font-weight="600">8,700.00</text>
+        </g>
+        <g transform="translate(0,80)">
+          <line x1="-42" y1="0" x2="580" y2="0" stroke="#ececea"/>
+          <text x="0" y="22" fill="#047857" font-size="11" font-weight="700">Balanced</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Rule panel -->
+    <g transform="translate(706,100)">
+      <rect width="414" height="180" rx="10" fill="#fff4ed" stroke="#ffc6a8"/>
+      <text x="20" y="30" font-size="11" fill="#c83512" letter-spacing="1.5" font-weight="700">RULE</text>
+      <text x="20" y="56" font-size="14" fill="#1e1c1a" font-weight="600">capex.threshold &gt; 5,000 SAR</text>
+      <text x="20" y="84" font-size="12" fill="#54514c">&gt; 5k SAR + useful life &gt; 12 months →</text>
+      <text x="20" y="102" font-size="12" fill="#54514c">capitalize + depreciate (SOCPA §10)</text>
+      <g transform="translate(20,130)">
+        <rect width="100" height="26" rx="13" fill="#ffffff" stroke="#ffc6a8"/>
+        <text x="50" y="17" font-size="11" fill="#c83512" font-weight="600" text-anchor="middle">Why?</text>
+      </g>
+      <g transform="translate(128,130)">
+        <rect width="100" height="26" rx="13" fill="#ffffff" stroke="#ffc6a8"/>
+        <text x="50" y="17" font-size="11" fill="#c83512" font-weight="600" text-anchor="middle">Change</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Actions -->
+  <g transform="translate(40,656)">
+    <rect width="160" height="42" rx="11" fill="#ffffff" stroke="#ececea"/>
+    <text x="80" y="26" font-size="13" fill="#54514c" text-anchor="middle">Edit</text>
+  </g>
+  <g transform="translate(220,656)">
+    <rect width="220" height="42" rx="11" fill="url(#orange3)"/>
+    <text x="110" y="26" font-size="13" fill="#ffffff" font-weight="600" text-anchor="middle">Confirm and post</text>
+  </g>
+  <g transform="translate(960,660)">
+    <text font-size="11" fill="#87847c">Learned pattern: next time, auto-confirm</text>
+    <text y="16" font-size="11" fill="#87847c">after 3 identical (vendor, account) pairs.</text>
+  </g>
+</svg>

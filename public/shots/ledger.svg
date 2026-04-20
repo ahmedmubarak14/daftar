@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="-apple-system, Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="accent2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5a1f"/><stop offset="1" stop-color="#c83512"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="780" rx="16" fill="#f5f4f0"/>
+  <rect x="16" y="16" width="1168" height="748" rx="12" fill="#ffffff" stroke="#ececea"/>
+  <rect x="16" y="16" width="1168" height="40" rx="12" fill="#faf9f6" stroke="#ececea"/>
+  <circle cx="40" cy="36" r="5" fill="#ff6b6b"/><circle cx="58" cy="36" r="5" fill="#ffb24a"/><circle cx="76" cy="36" r="5" fill="#44c06a"/>
+  <text x="600" y="40" font-size="11" fill="#87847c" text-anchor="middle">daftar/ledger</text>
+
+  <!-- Tabs -->
+  <g transform="translate(40,82)">
+    <rect width="260" height="36" rx="10" fill="#faf9f6" stroke="#ececea"/>
+    <rect x="4" y="4" width="80" height="28" rx="7" fill="#ffffff" stroke="#ececea"/>
+    <text x="44" y="23" font-size="12" fill="#1e1c1a" font-weight="600" text-anchor="middle">Journal</text>
+    <text x="130" y="23" font-size="12" fill="#87847c" text-anchor="middle">CoA</text>
+    <text x="220" y="23" font-size="12" fill="#87847c" text-anchor="middle">Trial balance</text>
+  </g>
+  <g transform="translate(960,82)">
+    <rect width="180" height="36" rx="10" fill="#ecfdf5" stroke="#a7f3d0"/>
+    <circle cx="20" cy="18" r="5" fill="#10b981"/>
+    <text x="34" y="23" font-size="12" fill="#047857" font-weight="600">Trial balance = 0.00</text>
+  </g>
+
+  <!-- Journal table -->
+  <g transform="translate(40,146)">
+    <rect width="1120" height="560" rx="12" fill="#ffffff" stroke="#ececea"/>
+    <g transform="translate(24,34)" font-size="11" fill="#87847c" letter-spacing="1" font-weight="700">
+      <text x="0" y="0">DATE</text>
+      <text x="120" y="0">MEMO</text>
+      <text x="540" y="0">ACCOUNT</text>
+      <text x="780" y="0" text-anchor="end">DEBIT</text>
+      <text x="920" y="0" text-anchor="end">CREDIT</text>
+      <text x="1060" y="0" text-anchor="end">SOURCE</text>
+    </g>
+    <line x1="24" y1="48" x2="1096" y2="48" stroke="#ececea"/>
+    <g transform="translate(24,78)" font-size="13">
+      <g>
+        <text x="0" y="0" fill="#54514c">15 Dec 2025</text>
+        <text x="120" y="0" fill="#1e1c1a">Founder capital contributions (3)</text>
+        <text x="540" y="0" fill="#54514c">3100 Paid-in capital</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">300,000</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">300,000</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">Setup · AOA</text>
+      </g>
+      <g transform="translate(0,44)">
+        <text x="0" y="0" fill="#54514c">20 Dec 2025</text>
+        <text x="120" y="0" fill="#1e1c1a">MISA license · organization costs</text>
+        <text x="540" y="0" fill="#54514c">1610 Org costs</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">12,000</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">12,000</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">Pre-inc.</text>
+      </g>
+      <g transform="translate(0,88)">
+        <text x="0" y="0" fill="#54514c">22 Dec 2025</text>
+        <text x="120" y="0" fill="#1e1c1a">Legal fees · AOA drafting</text>
+        <text x="540" y="0" fill="#54514c">1610 Org costs</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">4,500</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">4,500</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">Pre-inc.</text>
+      </g>
+      <g transform="translate(0,132)">
+        <text x="0" y="0" fill="#54514c">05 Jan 2026</text>
+        <text x="120" y="0" fill="#1e1c1a">Zoho One · annual · prepaid</text>
+        <text x="540" y="0" fill="#54514c">1300 Prepaid</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">6,000</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">6,000</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">Rule: 1/12</text>
+      </g>
+      <g transform="translate(0,176)">
+        <text x="0" y="0" fill="#54514c">22 Jan 2026</text>
+        <text x="120" y="0" fill="#1e1c1a">2× MacBook Pro · Jarir · capitalized</text>
+        <text x="540" y="0" fill="#54514c">1510 IT Equipment</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">17,400</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">17,400</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">&gt; 5k · capex</text>
+      </g>
+      <g transform="translate(0,220)">
+        <text x="0" y="0" fill="#54514c">01 Feb 2026</text>
+        <text x="120" y="0" fill="#1e1c1a">Monthly salaries · 2 employees</text>
+        <text x="540" y="0" fill="#54514c">6100 Salaries</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">22,900</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">22,900</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">Payroll</text>
+      </g>
+      <g transform="translate(0,264)">
+        <text x="0" y="0" fill="#54514c">15 Feb 2026</text>
+        <text x="120" y="0" fill="#1e1c1a">Co-working rent · Feb</text>
+        <text x="540" y="0" fill="#54514c">6410 Rent</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">4,500</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">4,500</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">Opex</text>
+      </g>
+      <g transform="translate(0,308)">
+        <text x="0" y="0" fill="#54514c">20 Feb 2026</text>
+        <text x="120" y="0" fill="#1e1c1a">Al Nahdi pilot · invoice #1</text>
+        <text x="540" y="0" fill="#54514c">4100 Revenue</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">18,750</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">18,750</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">Sales</text>
+      </g>
+      <g transform="translate(0,352)">
+        <text x="0" y="0" fill="#54514c">28 Feb 2026</text>
+        <text x="120" y="0" fill="#1e1c1a">Zoho · monthly amortization</text>
+        <text x="540" y="0" fill="#54514c">6210 Software subs</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">500</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">500</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">Auto</text>
+      </g>
+      <g transform="translate(0,396)">
+        <text x="0" y="0" fill="#54514c">28 Feb 2026</text>
+        <text x="120" y="0" fill="#1e1c1a">IT Equipment depreciation · Feb</text>
+        <text x="540" y="0" fill="#54514c">6700 Depreciation</text>
+        <text x="780" y="0" fill="#1e1c1a" text-anchor="end">363</text>
+        <text x="920" y="0" fill="#54514c" text-anchor="end">363</text>
+        <text x="1060" y="0" fill="#87847c" text-anchor="end" font-size="11">48-mo SL</text>
+      </g>
+      <g transform="translate(0,440)">
+        <line x1="-24" y1="0" x2="1096" y2="0" stroke="#ececea"/>
+        <text x="0" y="28" fill="#1e1c1a" font-weight="600" font-size="13">Totals (all 13 entries)</text>
+        <text x="780" y="28" fill="#1e1c1a" font-weight="700" font-size="13" text-anchor="end">404,913</text>
+        <text x="920" y="28" fill="#1e1c1a" font-weight="700" font-size="13" text-anchor="end">404,913</text>
+        <text x="1060" y="28" fill="#047857" font-size="11" text-anchor="end" font-weight="700">Δ = 0.00</text>
+      </g>
+    </g>
+  </g>
+</svg>

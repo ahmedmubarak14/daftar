@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="-apple-system, Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="vatbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff7a44"/><stop offset="1" stop-color="#c83512"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="780" rx="16" fill="#f5f4f0"/>
+  <rect x="16" y="16" width="1168" height="748" rx="12" fill="#ffffff" stroke="#ececea"/>
+  <rect x="16" y="16" width="1168" height="40" rx="12" fill="#faf9f6" stroke="#ececea"/>
+  <circle cx="40" cy="36" r="5" fill="#ff6b6b"/><circle cx="58" cy="36" r="5" fill="#ffb24a"/><circle cx="76" cy="36" r="5" fill="#44c06a"/>
+  <text x="600" y="40" font-size="11" fill="#87847c" text-anchor="middle">daftar/compliance</text>
+
+  <!-- Header -->
+  <g transform="translate(40,82)">
+    <text font-size="11" letter-spacing="1.5" font-weight="700" fill="#87847c">COMPLIANCE</text>
+    <text y="26" font-size="22" font-weight="600" fill="#1e1c1a">VAT threshold tracker</text>
+  </g>
+
+  <!-- VAT tracker -->
+  <g transform="translate(40,150)">
+    <rect width="1120" height="200" rx="14" fill="#ffffff" stroke="#ececea"/>
+    <text x="24" y="36" font-size="13" fill="#54514c">Rolling 12-month revenue</text>
+    <text x="24" y="78" font-size="34" fill="#1e1c1a" font-weight="700">112,300 <tspan font-size="18" fill="#87847c" font-weight="400">SAR</tspan></text>
+
+    <!-- progress bar -->
+    <g transform="translate(24,110)">
+      <rect width="1072" height="14" rx="7" fill="#faf9f6"/>
+      <rect width="640" height="14" rx="7" fill="url(#vatbar)"/>
+      <!-- Threshold markers -->
+      <line x1="1072" y1="-6" x2="1072" y2="20" stroke="#87847c" stroke-width="1"/>
+      <line x1="536" y1="-6" x2="536" y2="20" stroke="#87847c" stroke-width="1" stroke-dasharray="3 3"/>
+    </g>
+    <g font-size="12" fill="#87847c" transform="translate(24,148)">
+      <text x="0" y="0">0 SAR</text>
+      <text x="512" y="0">187,500 SAR</text>
+      <tspan><text x="540" y="16" font-size="10" fill="#87847c">Voluntary threshold</text></tspan>
+      <text x="1072" y="0" text-anchor="end">375,000 SAR</text>
+      <tspan><text x="1072" y="16" font-size="10" fill="#87847c" text-anchor="end">Mandatory threshold</text></tspan>
+    </g>
+    <g transform="translate(880,20)">
+      <rect width="216" height="40" rx="10" fill="#fff4ed" stroke="#ffc6a8"/>
+      <text x="14" y="25" font-size="12" fill="#c83512" font-weight="600">60% of voluntary threshold</text>
+    </g>
+  </g>
+
+  <!-- Regulatory calendar -->
+  <g transform="translate(40,380)">
+    <text font-size="11" letter-spacing="1.5" font-weight="700" fill="#87847c">REGULATORY CALENDAR</text>
+    <rect y="18" width="1120" height="326" rx="14" fill="#ffffff" stroke="#ececea"/>
+    <g transform="translate(24,50)" font-size="11" letter-spacing="1" fill="#87847c" font-weight="700">
+      <text>OBLIGATION</text>
+      <text x="620">DUE DATE</text>
+      <text x="820">COUNTDOWN</text>
+      <text x="1072" text-anchor="end">STATUS</text>
+    </g>
+    <line x1="24" y1="66" x2="1096" y2="66" stroke="#ececea"/>
+    <g transform="translate(24,92)" font-size="13">
+      <g>
+        <text fill="#1e1c1a" font-weight="500">WPS · March payroll</text>
+        <text y="18" font-size="11" fill="#87847c">Mudad submission</text>
+        <text x="620" y="0" fill="#54514c">15 Mar 2026</text>
+        <text x="820" y="0" fill="#1e1c1a" font-weight="600">15 days</text>
+        <g transform="translate(1040,-8)"><rect width="56" height="22" rx="11" fill="#fef3c7"/><text x="28" y="15" fill="#b45309" font-size="11" font-weight="600" text-anchor="middle">Upcoming</text></g>
+      </g>
+      <g transform="translate(0,52)">
+        <text fill="#1e1c1a" font-weight="500">GOSI · March contributions</text>
+        <text y="18" font-size="11" fill="#87847c">Employee + employer</text>
+        <text x="620" y="0" fill="#54514c">25 Mar 2026</text>
+        <text x="820" y="0" fill="#1e1c1a" font-weight="600">25 days</text>
+        <g transform="translate(1040,-8)"><rect width="56" height="22" rx="11" fill="#ecfdf5"/><text x="28" y="15" fill="#047857" font-size="11" font-weight="600" text-anchor="middle">On track</text></g>
+      </g>
+      <g transform="translate(0,104)">
+        <text fill="#1e1c1a" font-weight="500">VAT Q1 return</text>
+        <text y="18" font-size="11" fill="#87847c">ZATCA · Fatoora · preview ready</text>
+        <text x="620" y="0" fill="#54514c">30 Apr 2026</text>
+        <text x="820" y="0" fill="#1e1c1a" font-weight="600">61 days</text>
+        <g transform="translate(1040,-8)"><rect width="56" height="22" rx="11" fill="#ecfdf5"/><text x="28" y="15" fill="#047857" font-size="11" font-weight="600" text-anchor="middle">On track</text></g>
+      </g>
+      <g transform="translate(0,156)">
+        <text fill="#1e1c1a" font-weight="500">CR renewal</text>
+        <text y="18" font-size="11" fill="#87847c">Ministry of Commerce</text>
+        <text x="620" y="0" fill="#54514c">15 Jul 2026</text>
+        <text x="820" y="0" fill="#1e1c1a" font-weight="600">137 days</text>
+        <g transform="translate(1040,-8)"><rect width="56" height="22" rx="11" fill="#ecfdf5"/><text x="28" y="15" fill="#047857" font-size="11" font-weight="600" text-anchor="middle">On track</text></g>
+      </g>
+      <g transform="translate(0,208)">
+        <text fill="#1e1c1a" font-weight="500">MISA license renewal</text>
+        <text y="18" font-size="11" fill="#87847c">Foreign investment</text>
+        <text x="620" y="0" fill="#54514c">20 Dec 2026</text>
+        <text x="820" y="0" fill="#1e1c1a" font-weight="600">295 days</text>
+        <g transform="translate(1040,-8)"><rect width="56" height="22" rx="11" fill="#f5f4f0"/><text x="28" y="15" fill="#54514c" font-size="11" font-weight="600" text-anchor="middle">Future</text></g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <g transform="translate(40,726)">
+    <text font-size="11" fill="#87847c">All obligations derived from entity type, VAT state, and employee count. Changes to any of these regenerate the calendar.</text>
+  </g>
+</svg>

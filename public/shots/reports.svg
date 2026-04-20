@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="-apple-system, Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="orange4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5a1f"/><stop offset="1" stop-color="#c83512"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="780" rx="16" fill="#f5f4f0"/>
+  <rect x="16" y="16" width="1168" height="748" rx="12" fill="#ffffff" stroke="#ececea"/>
+  <rect x="16" y="16" width="1168" height="40" rx="12" fill="#faf9f6" stroke="#ececea"/>
+  <circle cx="40" cy="36" r="5" fill="#ff6b6b"/><circle cx="58" cy="36" r="5" fill="#ffb24a"/><circle cx="76" cy="36" r="5" fill="#44c06a"/>
+  <text x="600" y="40" font-size="11" fill="#87847c" text-anchor="middle">daftar/reports</text>
+
+  <g transform="translate(40,82)">
+    <text font-size="11" letter-spacing="1.5" font-weight="700" fill="#87847c">REPORTS · FEB 2026</text>
+    <text y="28" font-size="22" font-weight="600" fill="#1e1c1a">Monthly close</text>
+  </g>
+
+  <!-- Two-column: P&L + Plain-language -->
+  <g transform="translate(40,144)">
+    <!-- P&L -->
+    <g>
+      <rect width="720" height="420" rx="14" fill="#ffffff" stroke="#ececea"/>
+      <text x="22" y="32" font-size="15" font-weight="600" fill="#1e1c1a">Profit &amp; Loss · Feb 2026</text>
+      <text x="698" y="32" font-size="11" text-anchor="end" fill="#c83512" font-weight="600">Download PDF</text>
+      <line x1="22" y1="48" x2="698" y2="48" stroke="#ececea"/>
+
+      <g transform="translate(22,80)" font-size="13">
+        <text font-size="11" letter-spacing="1" fill="#87847c" font-weight="700">REVENUE</text>
+        <g transform="translate(0,22)">
+          <text fill="#54514c">4100 · SaaS subscriptions</text>
+          <text x="676" text-anchor="end" fill="#1e1c1a">18,750</text>
+        </g>
+        <g transform="translate(0,46)">
+          <line x1="0" y1="0" x2="676" y2="0" stroke="#ececea"/>
+          <text y="22" fill="#1e1c1a" font-weight="700">Total revenue</text>
+          <text x="676" y="22" text-anchor="end" fill="#1e1c1a" font-weight="700">18,750</text>
+        </g>
+      </g>
+
+      <g transform="translate(22,190)" font-size="13">
+        <text font-size="11" letter-spacing="1" fill="#87847c" font-weight="700">OPERATING EXPENSES</text>
+        <g transform="translate(0,22)"><text fill="#54514c">6100 · Salaries &amp; wages</text><text x="676" text-anchor="end" fill="#1e1c1a">22,900</text></g>
+        <g transform="translate(0,46)"><text fill="#54514c">6410 · Rent</text><text x="676" text-anchor="end" fill="#1e1c1a">4,500</text></g>
+        <g transform="translate(0,70)"><text fill="#54514c">6210 · Software subscriptions</text><text x="676" text-anchor="end" fill="#1e1c1a">500</text></g>
+        <g transform="translate(0,94)"><text fill="#54514c">6700 · Depreciation</text><text x="676" text-anchor="end" fill="#1e1c1a">363</text></g>
+        <g transform="translate(0,118)">
+          <line x1="0" y1="0" x2="676" y2="0" stroke="#ececea"/>
+          <text y="22" fill="#1e1c1a" font-weight="700">Total opex</text>
+          <text x="676" y="22" text-anchor="end" fill="#1e1c1a" font-weight="700">28,263</text>
+        </g>
+      </g>
+
+      <g transform="translate(22,372)">
+        <rect width="676" height="36" rx="10" fill="#fff4ed"/>
+        <text x="16" y="23" font-size="13" fill="#c83512" font-weight="700">Net income · Feb</text>
+        <text x="660" y="23" font-size="13" fill="#c83512" font-weight="700" text-anchor="end">(9,513)</text>
+      </g>
+    </g>
+
+    <!-- Plain-language summary -->
+    <g transform="translate(744,0)">
+      <rect width="376" height="420" rx="14" fill="url(#orange4)"/>
+      <text x="24" y="34" font-size="11" letter-spacing="1.5" fill="#ffffff" opacity="0.85" font-weight="700">THIS MONTH IN PLAIN LANGUAGE</text>
+      <foreignObject x="24" y="54" width="328" height="350">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="color:#ffffff;font:500 14px/1.55 -apple-system,Inter,system-ui,sans-serif">
+          <p style="margin:0 0 12px">February was a <b>burn month</b>. You brought in <b>SAR 18,750</b> from the Al Nahdi pilot, and spent <b>SAR 28,263</b> — leaving a net loss of <b>SAR 9,513</b>.</p>
+          <p style="margin:0 0 12px">Salaries made up <b>81%</b> of opex. Rent and software were the next largest lines.</p>
+          <p style="margin:0 0 12px">At the current pace you have <b>14.2 months</b> of runway. VAT-tracked revenue is <b>60% of the voluntary threshold</b>.</p>
+          <p style="margin:0;opacity:.85;font-size:12px;border-top:1px solid rgba(255,255,255,.25);padding-top:10px">Numbers above are pulled live from your ledger. The narrative around them is generated and validated to never misstate a number.</p>
+        </div>
+      </foreignObject>
+    </g>
+  </g>
+
+  <!-- Footer: balance sheet strip -->
+  <g transform="translate(40,588)">
+    <rect width="1120" height="146" rx="14" fill="#ffffff" stroke="#ececea"/>
+    <text x="22" y="32" font-size="15" font-weight="600" fill="#1e1c1a">Balance Sheet · 28 Feb 2026</text>
+    <g transform="translate(22,58)" font-size="13">
+      <g>
+        <text font-size="11" letter-spacing="1" fill="#87847c" font-weight="700">ASSETS</text>
+        <text x="0" y="22" fill="#54514c">Current</text><text x="260" y="22" text-anchor="end" fill="#1e1c1a">280,950</text>
+        <text x="0" y="44" fill="#54514c">Fixed (net)</text><text x="260" y="44" text-anchor="end" fill="#1e1c1a">17,037</text>
+      </g>
+      <g transform="translate(380,0)">
+        <text font-size="11" letter-spacing="1" fill="#87847c" font-weight="700">LIABILITIES</text>
+        <text x="0" y="22" fill="#54514c">Due to founders</text><text x="260" y="22" text-anchor="end" fill="#1e1c1a">1,500</text>
+      </g>
+      <g transform="translate(760,0)">
+        <text font-size="11" letter-spacing="1" fill="#87847c" font-weight="700">EQUITY</text>
+        <text x="0" y="22" fill="#54514c">Paid-in capital</text><text x="316" y="22" text-anchor="end" fill="#1e1c1a">300,000</text>
+        <text x="0" y="44" fill="#54514c">Retained earnings</text><text x="316" y="44" text-anchor="end" fill="#1e1c1a">(3,513)</text>
+      </g>
+    </g>
+    <g transform="translate(940,108)">
+      <rect width="156" height="24" rx="12" fill="#ecfdf5" stroke="#a7f3d0"/>
+      <circle cx="18" cy="12" r="4" fill="#10b981"/>
+      <text x="30" y="16" font-size="11" fill="#047857" font-weight="600">Assets = Liab. + Equity</text>
+    </g>
+  </g>
+</svg>
