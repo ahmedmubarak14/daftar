@@ -22,6 +22,8 @@ export const messages = {
     compliance: "Compliance",
     reports: "Reports",
     explain: "Glossary",
+    accountants: "Accountants",
+    integrations: "Connect books",
 
     // Common
     company: "Company",
@@ -152,6 +154,8 @@ export const messages = {
     compliance: "الامتثال",
     reports: "التقارير",
     explain: "المصطلحات",
+    accountants: "المحاسبون",
+    integrations: "اربط دفاترك",
 
     company: "الشركة",
     vat_state_not_registered: "غير مسجّل في ضريبة القيمة المضافة",

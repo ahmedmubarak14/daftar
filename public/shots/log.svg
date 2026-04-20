@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="-apple-system, Inter, system-ui, sans-serif">
   <defs>
     <linearGradient id="orange3" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ff5a1f"/><stop offset="1" stop-color="#c83512"/>
+      <stop offset="0" stop-color="#9fc921"/><stop offset="1" stop-color="#637f0f"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="780" rx="16" fill="#f5f4f0"/>
@@ -39,7 +39,7 @@
   <g transform="translate(40,310)">
     <rect width="1120" height="316" rx="14" fill="#ffffff" stroke="#ececea"/>
     <g transform="translate(22,30)">
-      <text font-size="11" fill="#c83512" letter-spacing="1.5" font-weight="700">PROPOSED</text>
+      <text font-size="11" fill="#637f0f" letter-spacing="1.5" font-weight="700">PROPOSED</text>
       <text x="1076" y="0" text-anchor="end" font-size="11" fill="#047857" font-weight="700">CONFIDENCE 94%</text>
     </g>
     <text x="62" y="66" font-size="17" fill="#1e1c1a" font-weight="600">Capitalize as IT Equipment · 48-month straight-line</text>
@@ -73,18 +73,18 @@
 
     <!-- Rule panel -->
     <g transform="translate(706,100)">
-      <rect width="414" height="180" rx="10" fill="#fff4ed" stroke="#ffc6a8"/>
-      <text x="20" y="30" font-size="11" fill="#c83512" letter-spacing="1.5" font-weight="700">RULE</text>
+      <rect width="414" height="180" rx="10" fill="#f4ffd9" stroke="#d4ff6e"/>
+      <text x="20" y="30" font-size="11" fill="#637f0f" letter-spacing="1.5" font-weight="700">RULE</text>
       <text x="20" y="56" font-size="14" fill="#1e1c1a" font-weight="600">capex.threshold &gt; 5,000 SAR</text>
       <text x="20" y="84" font-size="12" fill="#54514c">&gt; 5k SAR + useful life &gt; 12 months →</text>
       <text x="20" y="102" font-size="12" fill="#54514c">capitalize + depreciate (SOCPA §10)</text>
       <g transform="translate(20,130)">
-        <rect width="100" height="26" rx="13" fill="#ffffff" stroke="#ffc6a8"/>
-        <text x="50" y="17" font-size="11" fill="#c83512" font-weight="600" text-anchor="middle">Why?</text>
+        <rect width="100" height="26" rx="13" fill="#ffffff" stroke="#d4ff6e"/>
+        <text x="50" y="17" font-size="11" fill="#637f0f" font-weight="600" text-anchor="middle">Why?</text>
       </g>
       <g transform="translate(128,130)">
-        <rect width="100" height="26" rx="13" fill="#ffffff" stroke="#ffc6a8"/>
-        <text x="50" y="17" font-size="11" fill="#c83512" font-weight="600" text-anchor="middle">Change</text>
+        <rect width="100" height="26" rx="13" fill="#ffffff" stroke="#d4ff6e"/>
+        <text x="50" y="17" font-size="11" fill="#637f0f" font-weight="600" text-anchor="middle">Change</text>
       </g>
     </g>
   </g>

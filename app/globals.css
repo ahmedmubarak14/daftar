@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #fafaf8;
+  --background: #f5f4f0;
   --foreground: #1e1c1a;
 }
 
@@ -67,6 +67,6 @@ body {
 /* Soft radial hero glow */
 .hero-glow {
   background:
-    radial-gradient(1200px 500px at 50% 0%, rgba(255, 90, 31, 0.12), transparent 60%),
-    radial-gradient(800px 400px at 10% 100%, rgba(255, 154, 112, 0.10), transparent 60%);
+    radial-gradient(1200px 500px at 50% 0%, rgba(206, 255, 90, 0.18), transparent 60%),
+    radial-gradient(800px 400px at 10% 100%, rgba(159, 201, 33, 0.10), transparent 60%);
 }

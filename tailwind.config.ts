@@ -56,6 +56,8 @@ const config: Config = {
       },
       boxShadow: {
         card: "0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06)",
+        soft: "0 4px 12px rgba(16, 24, 40, 0.06), 0 2px 4px rgba(16, 24, 40, 0.04)",
+        hero: "0 20px 60px -20px rgba(29, 40, 5, 0.35), 0 8px 24px -12px rgba(29, 40, 5, 0.25)",
       },
     },
   },

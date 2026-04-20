@@ -13,6 +13,11 @@ const nav = [
   { href: "/ledger", key: "ledger" as const, icon: BookIcon },
   { href: "/compliance", key: "compliance" as const, icon: ShieldIcon },
   { href: "/reports", key: "reports" as const, icon: BarChartIcon },
+];
+
+const navWorkspace = [
+  { href: "/accountants", key: "accountants" as const, icon: UsersIcon },
+  { href: "/integrations", key: "integrations" as const, icon: PlugIcon },
   { href: "/explain", key: "explain" as const, icon: HelpIcon },
 ];
 
@@ -20,42 +25,52 @@ export default function Shell({ children }: { children: React.ReactNode }) {
   const { t, b, lang, setLang } = useI18n();
   const pathname = usePathname();
 
+  type NavItem = {
+    href: string;
+    key: "dashboard" | "setup" | "log" | "ledger" | "compliance" | "reports" | "explain" | "accountants" | "integrations";
+    icon: React.ComponentType<{ className?: string }>;
+  };
+  const renderItem = (item: NavItem) => {
+    const active = pathname === item.href || pathname.startsWith(item.href + "/");
+    return (
+      <Link
+        key={item.href}
+        href={item.href}
+        className={clsx(
+          "flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition",
+          active
+            ? "bg-brand-100 text-brand-950 font-semibold"
+            : "text-ink-600 hover:bg-ink-50 hover:text-ink-900"
+        )}
+      >
+        <item.icon className={clsx("w-4 h-4", active ? "text-brand-800" : "text-ink-400")} />
+        {t(item.key)}
+      </Link>
+    );
+  };
+
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex bg-canvas">
       {/* Sidebar */}
       <aside className="w-60 shrink-0 border-e border-ink-100 bg-white flex flex-col">
         <Link href="/" className="h-16 px-5 flex items-center border-b border-ink-100 hover:bg-ink-50 transition">
-          <Logo />
-          <span className="ms-2 font-semibold tracking-tight">Daftar</span>
-          <span className="ms-2 text-xs text-ink-400">· MVP</span>
+          <span className="text-xl font-bold tracking-tight text-ink-950">Daftar</span>
+          <span className="ms-2 text-[11px] font-medium text-ink-400 uppercase tracking-wider">MVP</span>
         </Link>
 
-        <nav className="flex-1 p-3 space-y-0.5">
-          {nav.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(item.href + "/");
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={clsx(
-                  "flex items-center gap-3 px-3 py-2 rounded-md text-sm transition",
-                  active
-                    ? "bg-brand-50 text-brand-800 font-medium"
-                    : "text-ink-600 hover:bg-ink-50 hover:text-ink-900"
-                )}
-              >
-                <item.icon className={clsx("w-4 h-4", active ? "text-brand-600" : "text-ink-400")} />
-                {t(item.key)}
-              </Link>
-            );
-          })}
+        <nav className="flex-1 p-3">
+          <div className="space-y-0.5">{nav.map(renderItem)}</div>
+          <div className="mt-6 mb-2 px-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-ink-400">
+            Workspace
+          </div>
+          <div className="space-y-0.5">{navWorkspace.map(renderItem)}</div>
         </nav>
 
         <div className="p-3 border-t border-ink-100">
-          <div className="px-3 py-2 rounded-md bg-ink-50">
-            <div className="text-[11px] uppercase tracking-wider text-ink-400">{t("company")}</div>
-            <div className="text-sm font-medium text-ink-800 truncate">{b(company.name)}</div>
-            <div className="text-[11px] text-ink-500 num-latn">CR {company.cr}</div>
+          <div className="px-3 py-2 rounded-lg bg-brand-50 border border-brand-100">
+            <div className="text-[11px] uppercase tracking-wider text-brand-800/70 font-semibold">{t("company")}</div>
+            <div className="text-sm font-semibold text-ink-900 truncate mt-0.5">{b(company.name)}</div>
+            <div className="text-[11px] text-ink-500 num-latn mt-0.5">CR {company.cr}</div>
           </div>
         </div>
       </aside>
@@ -79,27 +94,19 @@ export default function Shell({ children }: { children: React.ReactNode }) {
             >
               {lang === "en" ? "العربية" : "English"}
             </button>
-            <div className="w-8 h-8 rounded-full bg-brand-100 text-brand-700 grid place-items-center text-xs font-semibold">
+            <div className="w-8 h-8 rounded-full bg-brand-300 text-brand-950 grid place-items-center text-xs font-bold">
               FA
             </div>
           </div>
         </header>
 
-        <main className="flex-1 p-6 md:p-8 overflow-y-auto">{children}</main>
+        <main className="flex-1 p-6 md:p-8 overflow-y-auto bg-canvas">{children}</main>
       </div>
     </div>
   );
 }
 
 /* --- Minimal inline icons (no lucide dep to keep the demo self-contained) --- */
-
-function Logo() {
-  return (
-    <span className="inline-flex w-8 h-8 rounded-lg bg-brand-600 text-white items-center justify-center font-bold text-sm">
-      د
-    </span>
-  );
-}
 
 function Icon({ className, children }: { className?: string; children: React.ReactNode }) {
   return (
@@ -170,6 +177,25 @@ export function HelpIcon({ className }: { className?: string }) {
       <circle cx="12" cy="12" r="9" />
       <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.9.4-1.5 1-1.5 2.2" />
       <circle cx="12" cy="17" r="0.5" fill="currentColor" />
+    </Icon>
+  );
+}
+export function UsersIcon({ className }: { className?: string }) {
+  return (
+    <Icon className={className}>
+      <circle cx="9" cy="8" r="3.2" />
+      <path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" />
+      <circle cx="17" cy="9" r="2.5" />
+      <path d="M15 20c0-2.4 1.7-4 4-4" />
+    </Icon>
+  );
+}
+export function PlugIcon({ className }: { className?: string }) {
+  return (
+    <Icon className={className}>
+      <path d="M9 3v5M15 3v5" />
+      <rect x="7" y="8" width="10" height="6" rx="1.5" />
+      <path d="M12 14v3a3 3 0 0 0 3 3h1" />
     </Icon>
   );
 }

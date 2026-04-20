@@ -11,30 +11,40 @@ export function Card({
   title,
   subtitle,
   action,
+  padding = "default",
 }: {
   children: React.ReactNode;
   className?: string;
   title?: React.ReactNode;
   subtitle?: React.ReactNode;
   action?: React.ReactNode;
+  padding?: "default" | "tight" | "none";
 }) {
   return (
     <section
       className={clsx(
-        "bg-white border border-ink-100 rounded-xl shadow-card",
+        "bg-white border border-ink-100 rounded-2xl shadow-card hover:shadow-soft transition-shadow",
         className
       )}
     >
       {(title || action) && (
-        <header className="px-5 py-4 flex items-center justify-between border-b border-ink-100">
+        <header className="px-5 pt-4 pb-3 flex items-center justify-between border-b border-ink-100">
           <div>
-            {title && <h3 className="font-semibold text-ink-800">{title}</h3>}
+            {title && <h3 className="font-semibold text-ink-900 tracking-tight">{title}</h3>}
             {subtitle && <p className="text-xs text-ink-500 mt-0.5">{subtitle}</p>}
           </div>
           {action}
         </header>
       )}
-      <div className="p-5">{children}</div>
+      <div
+        className={clsx(
+          padding === "none" && "",
+          padding === "tight" && "p-4",
+          padding === "default" && "p-5"
+        )}
+      >
+        {children}
+      </div>
     </section>
   );
 }
@@ -44,26 +54,41 @@ export function Stat({
   value,
   sub,
   tone = "default",
+  inverted = false,
 }: {
   label: React.ReactNode;
   value: React.ReactNode;
   sub?: React.ReactNode;
   tone?: "default" | "good" | "bad";
+  /** Use this when the stat sits on a dark/gradient background. */
+  inverted?: boolean;
 }) {
   return (
     <div>
-      <div className="text-xs uppercase tracking-wider text-ink-400">{label}</div>
       <div
         className={clsx(
-          "mt-1 text-2xl font-semibold num-latn",
-          tone === "good" && "text-brand-700",
-          tone === "bad" && "text-rose-600",
-          tone === "default" && "text-ink-900"
+          "text-[11px] uppercase tracking-[0.16em] font-semibold",
+          inverted ? "text-brand-950/70" : "text-ink-400"
+        )}
+      >
+        {label}
+      </div>
+      <div
+        className={clsx(
+          "mt-1.5 text-3xl font-semibold num-latn tracking-tight",
+          !inverted && tone === "good" && "text-brand-700",
+          !inverted && tone === "bad" && "text-rose-600",
+          !inverted && tone === "default" && "text-ink-900",
+          inverted && "text-brand-950"
         )}
       >
         {value}
       </div>
-      {sub && <div className="text-xs text-ink-500 mt-1">{sub}</div>}
+      {sub && (
+        <div className={clsx("text-xs mt-1.5", inverted ? "text-brand-950/70" : "text-ink-500")}>
+          {sub}
+        </div>
+      )}
     </div>
   );
 }
@@ -152,19 +177,28 @@ export function WhyButton({
 }
 
 export function SectionHeading({
+  eyebrow,
   title,
   subtitle,
   action,
 }: {
+  eyebrow?: React.ReactNode;
   title: React.ReactNode;
   subtitle?: React.ReactNode;
   action?: React.ReactNode;
 }) {
   return (
-    <div className="mb-6 flex items-end justify-between">
+    <div className="mb-6 flex items-end justify-between gap-4">
       <div>
-        <h1 className="text-2xl font-semibold tracking-tight text-ink-900">{title}</h1>
-        {subtitle && <p className="text-sm text-ink-500 mt-1">{subtitle}</p>}
+        {eyebrow && (
+          <div className="text-[11px] uppercase tracking-[0.18em] font-semibold text-ink-400 mb-2">
+            {eyebrow}
+          </div>
+        )}
+        <h1 className="text-[28px] leading-tight font-semibold tracking-tight text-ink-900">
+          {title}
+        </h1>
+        {subtitle && <p className="text-sm text-ink-500 mt-1.5">{subtitle}</p>}
       </div>
       {action}
     </div>
