@@ -22,14 +22,14 @@ export default function Landing() {
             </span>
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm text-ink-600">
-            <a href="#problem" className="hover:text-ink-900">
-              {ar ? "المشكلة" : "Problem"}
-            </a>
             <a href="#features" className="hover:text-ink-900">
               {ar ? "المميزات" : "Features"}
             </a>
-            <a href="#preview" className="hover:text-ink-900">
-              {ar ? "نظرة على المنتج" : "Preview"}
+            <a href="#integrations" className="hover:text-ink-900">
+              {ar ? "التكاملات" : "Integrations"}
+            </a>
+            <a href="#experts" className="hover:text-ink-900">
+              {ar ? "المحاسبون" : "Experts"}
             </a>
             <a href="#pricing" className="hover:text-ink-900">
               {ar ? "الأسعار" : "Pricing"}
@@ -271,6 +271,191 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* Integrations */}
+      <section id="integrations" className="border-t border-ink-100 bg-white">
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <div className="max-w-2xl">
+            <div className="text-xs uppercase tracking-wider text-brand-700 font-semibold mb-3">
+              {ar ? "التكاملات" : "Integrations"}
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {ar
+                ? "يعمل مع الأدوات التي تستخدمها بالفعل."
+                : "Works with the tools you already use."}
+            </h2>
+            <p className="mt-4 text-ink-600 leading-relaxed">
+              {ar
+                ? "استورد من نظامك الحالي، أو صدّر إليه، أو شغّل دفتر بالتوازي. لا حاجة لاعتماد كامل من اليوم الأول."
+                : "Import from your current system, export to it, or run Daftar in parallel. No need to go all-in on day one."}
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <div className="text-xs font-semibold text-ink-500 uppercase tracking-wider mb-4">
+              {ar ? "برامج المحاسبة" : "Accounting systems"}
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+              <IntegrationTile name="Wafeq" status={ar ? "متاح" : "Available"} available />
+              <IntegrationTile nameAr="قيود" name="Qoyod" status={ar ? "متاح" : "Available"} available />
+              <IntegrationTile name="Zoho Books" status={ar ? "متاح" : "Available"} available />
+              <IntegrationTile name="Odoo" status={ar ? "قريباً" : "Soon"} />
+              <IntegrationTile name="QuickBooks" status={ar ? "قريباً" : "Soon"} />
+              <IntegrationTile name="Xero" status={ar ? "قريباً" : "Soon"} />
+            </div>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <IntegrationCategory
+              title={ar ? "البنوك" : "Banks"}
+              items={["Al Rajhi", "SNB", "Riyad Bank", "STC Pay", "Mada"]}
+              note={ar ? "عبر SAMA Open Banking — v2" : "via SAMA Open Banking — v2"}
+              ar={ar}
+            />
+            <IntegrationCategory
+              title={ar ? "البوابات والمتاجر" : "Payments & e-commerce"}
+              items={["Moyasar", "HyperPay", "Tap", "Salla", "Zid"]}
+              note={ar ? "متاحة في المرحلة التالية" : "Coming in the next phase"}
+              ar={ar}
+            />
+            <IntegrationCategory
+              title={ar ? "الرواتب والامتثال" : "Payroll & compliance"}
+              items={["ZATCA Fatoora", "GOSI", "WPS", "Mudad", "Qiwa"]}
+              note={ar ? "التقديم المباشر — v2" : "Direct filing — v2"}
+              ar={ar}
+            />
+            <IntegrationCategory
+              title={ar ? "المنتجية" : "Productivity"}
+              items={["Google Drive", "Slack", "Notion", "Email (IMAP)"]}
+              note={ar ? "للمرفقات والتنبيهات" : "For attachments and alerts"}
+              ar={ar}
+            />
+          </div>
+
+          <div className="mt-8 rounded-xl bg-brand-50/60 border border-brand-100 p-5 flex items-start gap-4">
+            <div className="w-10 h-10 rounded-lg bg-brand-600 text-white grid place-items-center text-lg shrink-0">
+              ⇄
+            </div>
+            <div>
+              <div className="font-semibold text-ink-900">
+                {ar ? "الانتقال من نظام آخر؟" : "Migrating from another system?"}
+              </div>
+              <p className="mt-1 text-sm text-ink-600 leading-relaxed">
+                {ar
+                  ? "نستورد دليل الحسابات، أرصدة الافتتاح، وآخر 12 شهر من القيود من وافق أو قيود أو زوهو أو Odoo أو QuickBooks. الأصل يبقى كما هو — نحن نُعيد البناء بشكل متوافق مع SOCPA."
+                  : "We import your chart of accounts, opening balances, and last 12 months of journals from Wafeq, Qoyod, Zoho, Odoo, or QuickBooks. Your original books stay intact — we rebuild in a SOCPA-clean way alongside."}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experts / Accountant on demand */}
+      <section id="experts" className="border-t border-ink-100 bg-gradient-to-b from-[#fafaf8] to-white">
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <div className="max-w-2xl">
+            <div className="text-xs uppercase tracking-wider text-brand-700 font-semibold mb-3">
+              {ar ? "محاسبون عند الطلب" : "Accountants on demand"}
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+              {ar
+                ? "تحتاج محاسباً بجانبك؟ احجز ساعة. يرى نفس دفاترك."
+                : "Need a human in the loop? Book an hour. They see the same books you do."}
+            </h2>
+            <p className="mt-4 text-ink-600 leading-relaxed">
+              {ar
+                ? "كل المحاسبين معتمدون من SOCPA ومُراجَعون من فريق دفتر. احجز مكالمة 30 دقيقة أو أسند مهمة كاملة. الدفع حسب الاستخدام — بدون عقد شهري."
+                : "Every accountant is SOCPA-certified and vetted by Daftar. Book a 30-minute call or hand off a full task. Pay as you go — no monthly retainer."}
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <ExpertCard
+              initials="LA"
+              name={ar ? "ليلى السبيعي" : "Layla Al-Subaie"}
+              title={ar ? "خبيرة زاتكا وضريبة القيمة المضافة" : "ZATCA & VAT specialist"}
+              years={ar ? "12 سنة خبرة" : "12 years experience"}
+              badges={
+                ar ? ["ضريبة القيمة المضافة", "الزكاة", "الفوترة الإلكترونية"] : ["VAT", "Zakat", "E-invoicing"]
+              }
+              rate={350}
+              rating="4.9"
+              reviews={142}
+              ar={ar}
+            />
+            <ExpertCard
+              initials="AG"
+              name={ar ? "عبدالله الغامدي" : "Abdullah Al-Ghamdi"}
+              title={ar ? "تنظيف دفاتر ما قبل التدقيق، سابقاً في Big 4" : "Audit-ready cleanup, ex-Big 4"}
+              years={ar ? "15 سنة خبرة" : "15 years experience"}
+              badges={
+                ar ? ["تدقيق", "جولات استثمارية", "IFRS"] : ["Audit", "Due diligence", "IFRS"]
+              }
+              rate={500}
+              rating="5.0"
+              reviews={87}
+              popular
+              ar={ar}
+            />
+            <ExpertCard
+              initials="HO"
+              name={ar ? "هند العمري" : "Hind Al-Omari"}
+              title={ar ? "الشركات الناشئة التقنية" : "Tech startups & fundraising"}
+              years={ar ? "8 سنوات خبرة" : "8 years experience"}
+              badges={
+                ar
+                  ? ["شركات SaaS", "نماذج مالية", "قوائم للمستثمرين"]
+                  : ["SaaS", "Financial models", "Investor decks"]
+              }
+              rate={400}
+              rating="4.8"
+              reviews={63}
+              ar={ar}
+            />
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <TaskCard
+              title={ar ? "مكالمة سريعة" : "Quick call"}
+              price={ar ? "من 175 ر.س" : "From SAR 175"}
+              desc={
+                ar
+                  ? "30 دقيقة لسؤال محدد. يرى المحاسب دفاترك مباشرة."
+                  : "30 minutes for a specific question. They see your books live."
+              }
+            />
+            <TaskCard
+              title={ar ? "إغلاق شهري" : "Monthly close review"}
+              price={ar ? "من 750 ر.س" : "From SAR 750"}
+              desc={
+                ar
+                  ? "محاسب يراجع إغلاق الشهر، يوقّع على التصنيفات، ويُجهّز التقرير."
+                  : "An accountant reviews the month's close, signs off on classifications, and preps the report."
+              }
+            />
+            <TaskCard
+              title={ar ? "جاهزية التدقيق" : "Audit-ready package"}
+              price={ar ? "من 3,500 ر.س" : "From SAR 3,500"}
+              desc={
+                ar
+                  ? "تنظيف كامل لآخر 12 شهر قبل جولة استثمار أو تدقيق مستقل."
+                  : "Full 12-month cleanup before a funding round or external audit."
+              }
+            />
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-xl border border-ink-100 bg-white p-5">
+            <div className="text-sm text-ink-600">
+              {ar
+                ? "أكثر من 20 محاسب معتمد في الشبكة · متوسط وقت الرد أقل من ساعة"
+                : "20+ vetted accountants in the network · average response under 1 hour"}
+            </div>
+            <button className="shrink-0 text-sm px-4 py-2 rounded-md border border-ink-200 hover:bg-ink-50 text-ink-800 font-medium">
+              {ar ? "تصفح جميع المحاسبين ←" : "Browse all accountants →"}
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section id="pricing" className="border-t border-ink-100 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-20">
@@ -472,6 +657,186 @@ function PriceCard({
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+function IntegrationTile({
+  name,
+  nameAr,
+  status,
+  available = false,
+}: {
+  name: string;
+  nameAr?: string;
+  status: string;
+  available?: boolean;
+}) {
+  return (
+    <div
+      className={`rounded-xl border p-4 transition ${
+        available
+          ? "border-ink-100 bg-white hover:shadow-card hover:border-brand-200"
+          : "border-dashed border-ink-200 bg-[#fafaf8]"
+      }`}
+    >
+      <div className="flex items-baseline justify-between gap-2">
+        <div className="font-semibold text-ink-900 text-sm truncate">
+          {nameAr ? (
+            <span>
+              {nameAr} <span className="text-ink-400 text-xs font-normal">· {name}</span>
+            </span>
+          ) : (
+            name
+          )}
+        </div>
+      </div>
+      <div
+        className={`mt-2 inline-flex items-center gap-1 text-[10px] font-medium rounded-full px-2 py-0.5 ${
+          available
+            ? "bg-emerald-50 text-emerald-700 border border-emerald-100"
+            : "bg-ink-100 text-ink-500"
+        }`}
+      >
+        {available && <span className="w-1 h-1 rounded-full bg-emerald-500" />}
+        {status}
+      </div>
+    </div>
+  );
+}
+
+function IntegrationCategory({
+  title,
+  items,
+  note,
+  ar,
+}: {
+  title: string;
+  items: string[];
+  note: string;
+  ar: boolean;
+}) {
+  return (
+    <div className="rounded-xl border border-ink-100 bg-[#fafaf8] p-5">
+      <div className="flex items-baseline justify-between mb-3">
+        <div className="text-sm font-semibold text-ink-900">{title}</div>
+        <div className="text-[10px] text-ink-500 uppercase tracking-wider">{note}</div>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        {items.map((item) => (
+          <span
+            key={item}
+            className="text-xs text-ink-700 bg-white border border-ink-200 rounded-md px-2.5 py-1 num-latn"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ExpertCard({
+  initials,
+  name,
+  title,
+  years,
+  badges,
+  rate,
+  rating,
+  reviews,
+  popular = false,
+  ar,
+}: {
+  initials: string;
+  name: string;
+  title: string;
+  years: string;
+  badges: string[];
+  rate: number;
+  rating: string;
+  reviews: number;
+  popular?: boolean;
+  ar: boolean;
+}) {
+  return (
+    <div
+      className={`rounded-xl p-5 flex flex-col ${
+        popular
+          ? "border-2 border-brand-600 bg-white shadow-card"
+          : "border border-ink-100 bg-white"
+      }`}
+    >
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 rounded-full bg-brand-100 text-brand-800 grid place-items-center font-semibold">
+            {initials}
+          </div>
+          <div>
+            <div className="font-semibold text-ink-900">{name}</div>
+            <div className="text-xs text-ink-500 num-latn">
+              ★ {rating} · {reviews} {ar ? "تقييم" : "reviews"}
+            </div>
+          </div>
+        </div>
+        {popular && (
+          <span className="text-[10px] font-semibold uppercase tracking-wider bg-brand-600 text-white rounded-full px-2 py-0.5">
+            {ar ? "موصى به" : "Top rated"}
+          </span>
+        )}
+      </div>
+
+      <div className="mt-4 text-sm text-ink-700">{title}</div>
+      <div className="mt-1 text-xs text-ink-500">{years}</div>
+
+      <div className="mt-4 flex flex-wrap gap-1.5">
+        {badges.map((b) => (
+          <span
+            key={b}
+            className="text-[11px] font-medium text-brand-800 bg-brand-50 border border-brand-100 rounded-full px-2 py-0.5"
+          >
+            {b}
+          </span>
+        ))}
+      </div>
+
+      <div className="mt-5 pt-5 border-t border-ink-100 flex items-baseline justify-between">
+        <div>
+          <span className="text-2xl font-semibold num-latn text-ink-900">{rate}</span>
+          <span className="text-sm text-ink-500 ms-1">
+            {ar ? "ر.س / ساعة" : "SAR / hr"}
+          </span>
+        </div>
+        <button
+          className={`text-sm px-3 py-2 rounded-md font-medium ${
+            popular
+              ? "bg-brand-600 text-white hover:bg-brand-700"
+              : "border border-ink-200 hover:bg-ink-50 text-ink-800"
+          }`}
+        >
+          {ar ? "احجز مكالمة" : "Book a call"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function TaskCard({
+  title,
+  price,
+  desc,
+}: {
+  title: string;
+  price: string;
+  desc: string;
+}) {
+  return (
+    <div className="rounded-xl border border-ink-100 bg-white p-5">
+      <div className="flex items-baseline justify-between">
+        <div className="font-semibold text-ink-900">{title}</div>
+        <div className="text-xs font-semibold text-brand-700 num-latn">{price}</div>
+      </div>
+      <p className="mt-2 text-sm text-ink-600 leading-relaxed">{desc}</p>
     </div>
   );
 }
