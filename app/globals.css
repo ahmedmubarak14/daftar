@@ -35,3 +35,38 @@ body {
   border-radius: 9999px;
   display: inline-block;
 }
+
+/* Landing-page scoped typography tweaks (don't affect authed routes) */
+.landing {
+  --landing-bg: #f5f4f0;
+  background: var(--landing-bg);
+}
+.landing h1,
+.landing h2,
+.landing h3 {
+  letter-spacing: -0.02em;
+}
+.landing .eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #87847c;
+}
+
+/* Infinite logo marquee (pure CSS) */
+@keyframes marquee-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee-x 28s linear infinite;
+  width: max-content;
+}
+
+/* Soft radial hero glow */
+.hero-glow {
+  background:
+    radial-gradient(1200px 500px at 50% 0%, rgba(255, 90, 31, 0.12), transparent 60%),
+    radial-gradient(800px 400px at 10% 100%, rgba(255, 154, 112, 0.10), transparent 60%);
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { Card, Pill, SectionHeading, Stat, StatusDot, WhyButton } from "@/components/ui";
 import {
@@ -139,7 +140,166 @@ export default function DashboardPage() {
           </table>
         </div>
       </Card>
+
+      {/* Accountants on demand */}
+      <AccountantsPanel />
+
+      {/* Integrations */}
+      <IntegrationsPanel />
     </div>
+  );
+}
+
+/* ─────────────────── Accountants on demand ─────────────────── */
+
+function AccountantsPanel() {
+  const { t, lang } = useI18n();
+  const ar = lang === "ar";
+  const [openId, setOpenId] = useState<string | null>(null);
+
+  const accountants = [
+    {
+      id: "sarah",
+      n: ar ? "أ. سارة الحربي" : "Sarah Al-Harbi",
+      s: ar ? "محاسبة قانونية — ضريبة القيمة المضافة" : "CPA — VAT filing",
+      rate: "280",
+      rating: "4.9",
+      tag: ar ? "SOCPA" : "SOCPA CPA",
+    },
+    {
+      id: "khalid",
+      n: ar ? "أ. خالد المطيري" : "Khalid Al-Mutairi",
+      s: ar ? "مدير مالي — شركات ناشئة" : "CFO — startup growth",
+      rate: "450",
+      rating: "4.8",
+      tag: ar ? "مدير مالي سابق" : "Ex-CFO",
+    },
+    {
+      id: "hind",
+      n: ar ? "أ. هند السبيعي" : "Hind Al-Subaie",
+      s: ar ? "الزكاة وضريبة الشركات" : "Zakat & CIT",
+      rate: "320",
+      rating: "4.9",
+      tag: ar ? "زكاة ضريبة" : "Zakat & tax",
+    },
+  ];
+
+  return (
+    <section id="accountants" className="mt-8 scroll-mt-6">
+      <SectionHeading title={t("dash_accountants_title")} subtitle={t("dash_accountants_sub")} />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {accountants.map((a) => (
+          <Card key={a.id}>
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent-400 to-accent-700 grid place-items-center text-white font-bold">
+                {a.n.split(" ").slice(-2).map((p) => p[0]).join("")}
+              </div>
+              <div className="min-w-0">
+                <div className="font-semibold text-ink-900 truncate">{a.n}</div>
+                <div className="text-xs text-ink-500 truncate">{a.s}</div>
+              </div>
+            </div>
+            <div className="mt-4 flex items-center justify-between text-sm">
+              <span className="text-ink-800">
+                <span className="num-latn font-semibold">{a.rate} SAR</span>
+                <span className="text-ink-500 ms-1">{t("dash_accountants_per_hour")}</span>
+              </span>
+              <Pill tone="brand">{a.tag}</Pill>
+            </div>
+            <div className="mt-1 text-xs text-ink-500">
+              ★ <span className="num-latn">{a.rating}</span> {t("dash_accountants_rating")}
+            </div>
+            <button
+              onClick={() => setOpenId(a.id)}
+              className="mt-4 w-full px-4 py-2.5 rounded-xl bg-gradient-to-br from-accent-500 to-accent-700 text-white text-sm font-medium hover:shadow-md transition"
+            >
+              {t("dash_accountants_book")}
+            </button>
+          </Card>
+        ))}
+      </div>
+
+      {openId && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-50 bg-ink-950/30 backdrop-blur-[1px] flex items-end sm:items-center justify-center p-4"
+          onClick={() => setOpenId(null)}
+        >
+          <div
+            dir={ar ? "rtl" : "ltr"}
+            className="w-full max-w-md bg-white rounded-xl shadow-xl border border-ink-100 p-5"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between">
+              <h4 className="font-semibold text-ink-800">{t("dash_accountants_modal_title")}</h4>
+              <button
+                onClick={() => setOpenId(null)}
+                className="text-ink-400 hover:text-ink-700 text-sm"
+                aria-label={t("close")}
+              >
+                ✕
+              </button>
+            </div>
+            <p className="mt-3 text-sm text-ink-700 leading-relaxed">{t("dash_accountants_modal_body")}</p>
+            <div className="mt-4 flex justify-end">
+              <button
+                onClick={() => setOpenId(null)}
+                className="text-sm px-3 py-1.5 rounded-md bg-ink-100 hover:bg-ink-200 text-ink-700"
+              >
+                {t("close")}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
+/* ─────────────────── Integrations ─────────────────── */
+
+function IntegrationsPanel() {
+  const { t, lang } = useI18n();
+  const ar = lang === "ar";
+
+  const tiles = [
+    { k: "W", name: "Wafeq", d: ar ? "المحاسبة العربية" : "Arabic-first accounting" },
+    { k: "Q", name: "Qoyod", d: ar ? "سحابي سعودي" : "Saudi cloud books" },
+    { k: "O", name: "Odoo", d: ar ? "ERP مفتوح" : "Open ERP" },
+    { k: "Z", name: "Zoho Books", d: ar ? "شهير إقليمياً" : "Popular regionally" },
+    { k: "Q", name: "QuickBooks", d: ar ? "عالمي" : "Global standard" },
+    { k: "X", name: "Xero", d: ar ? "سحابي عالمي" : "Global cloud" },
+  ];
+
+  return (
+    <section id="integrations" className="mt-10 scroll-mt-6">
+      <SectionHeading title={t("dash_integrations_title")} subtitle={t("dash_integrations_sub")} />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {tiles.map((tile) => (
+          <Card key={tile.name + tile.k}>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex w-11 h-11 rounded-xl bg-gradient-to-br from-ink-100 to-ink-200 text-ink-800 items-center justify-center text-lg font-bold">
+                {tile.k}
+              </span>
+              <div className="flex-1 min-w-0">
+                <div className="font-semibold text-ink-900">{tile.name}</div>
+                <div className="text-xs text-ink-500 truncate">{tile.d}</div>
+              </div>
+              <span className="text-[10px] uppercase tracking-wider text-accent-700 bg-accent-50 border border-accent-100 rounded-full px-2 py-0.5">
+                {t("dash_integrations_demo_tag")}
+              </span>
+            </div>
+            <button
+              className="mt-4 w-full px-4 py-2.5 rounded-xl bg-ink-900 text-white text-sm font-medium hover:bg-ink-800 transition"
+              type="button"
+            >
+              {t("dash_integrations_connect")}
+            </button>
+          </Card>
+        ))}
+      </div>
+    </section>
   );
 }
 

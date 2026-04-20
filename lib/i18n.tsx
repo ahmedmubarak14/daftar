@@ -127,6 +127,22 @@ export const messages = {
     // Explain
     exp_title: "Glossary & Explanations",
     exp_search: "Search a term (e.g. ZATCA, VAT, SOCPA)",
+
+    // Dashboard — accountants & integrations panels
+    dash_accountants_title: "Accountants on demand",
+    dash_accountants_sub:
+      "Book a SOCPA-certified accountant by the hour for close review, VAT filing help, or a CFO sanity check.",
+    dash_accountants_book: "Book a call",
+    dash_accountants_modal_title: "Booking — demo only",
+    dash_accountants_modal_body:
+      "In the full product this opens a scheduler with the accountant's available slots and charges per-hour to your workspace. The demo stops here.",
+    dash_accountants_per_hour: "/ hour",
+    dash_accountants_rating: "rating",
+    dash_integrations_title: "Connect your books",
+    dash_integrations_sub:
+      "Daftar reads from your existing accounting system so you don't re-enter data. One-way sync first, write-back in a later release.",
+    dash_integrations_connect: "Connect",
+    dash_integrations_demo_tag: "Demo",
   },
   ar: {
     dashboard: "الرئيسية",
@@ -233,6 +249,21 @@ export const messages = {
 
     exp_title: "المصطلحات والشروحات",
     exp_search: "ابحث عن مصطلح (مثل زاتكا، ضريبة القيمة المضافة، SOCPA)",
+
+    dash_accountants_title: "محاسبون عند الطلب",
+    dash_accountants_sub:
+      "احجز محاسباً معتمداً من الهيئة السعودية للمراجعين والمحاسبين بالساعة لمراجعة الإقفال، تقديم الإقرار الضريبي، أو جلسة مدير مالي استشارية.",
+    dash_accountants_book: "احجز مكالمة",
+    dash_accountants_modal_title: "الحجز — عرض تجريبي",
+    dash_accountants_modal_body:
+      "في النسخة النهائية يفتح هذا الزر شاشة الحجز ويخصم من رصيد الشركة بالساعة. هنا نتوقّف عند هذا الحد.",
+    dash_accountants_per_hour: "/ ساعة",
+    dash_accountants_rating: "التقييم",
+    dash_integrations_title: "اربط دفاترك الحالية",
+    dash_integrations_sub:
+      "يقرأ دفتر من نظامك المحاسبي الحالي حتى لا تُعيد إدخال البيانات. مزامنة باتجاه واحد أولاً، وكتابة عكسية لاحقاً.",
+    dash_integrations_connect: "اربط",
+    dash_integrations_demo_tag: "تجريبي",
   },
 } as const;
 
